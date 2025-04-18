@@ -64,7 +64,7 @@ with col1:
     with sous_col2:
         morsure = st.number_input("Niveau de morsure", min_value=1)
         instinct_chasse = st.number_input("Niveau d'instinct de chasse", min_value=1)
-        tm_arrivee = st.number_input("TM à l'arrivée de la chasse (en Millions)", min_value=1, placeholder='Écris "5" pour 5M')
+        tm_arrivee = st.number_input("TM à l'arrivée de la chasse (en Millions)", min_value=1, max_value=100, placeholder='Écris "5" pour 5M')
 
 coef_magique = (k1 / (float(tm_arrivee) ** k2)) * (1 / (k3 ** float(tm_arrivee)))
 tm_chasse = int(coef_magique * calcul_fdf_par_chasse())

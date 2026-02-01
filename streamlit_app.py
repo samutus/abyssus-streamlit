@@ -194,7 +194,7 @@ with col2:
         st.metric(label="Requins Blancs / chasse", value=int(nb_requin_blanc / instinct_chasse) if instinct_chasse > 0 else 0)
 
     # Alerte si TM maximal / chasse trop faible
-    if tc_optimal < 5_000_000:
+    if tc_optimal < 5_000_000 and tc_optimal != 0 :
         st.warning("⚠️ Attention, le TM / chasse est très faible. Descends le TM d'arrivée pour mieux t'adapter à ton armée.")
 
 # SECTION EXPLICATIONS
